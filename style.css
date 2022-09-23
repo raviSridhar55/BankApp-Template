@@ -4,12 +4,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
   font-family: "Ubuntu", sans-serif;
-  min-height: 100vh;
-  background-color: bisque;
+  min-height: 100%;
+  background-color: #001530;
   overflow-x: hidden;
 }
 
@@ -23,7 +24,8 @@ li {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 100%;
+  height: auto;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
@@ -33,11 +35,12 @@ li {
   height: 50px;
   width: 100%;
   position: relative;
-  background-color: #377dff;
+  /* background-color: #377dff; */
   color: #fff;
+  overflow: hidden;
 }
 
-.login-tab {
+/* .login-tab {
   padding: 5px;
   position: absolute;
   right: 0;
@@ -53,7 +56,7 @@ li {
 
 .login {
   height: 100%;
-  width: 100px;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -79,19 +82,18 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 /* Hero */
 
 .hero {
-  height: calc(100vh - 50px);
+  height: 100vh;
   width: 100%;
   background: #fff;
   padding: 20px;
   background: url("./sl_121021_47240_20.jpg") center center/cover no-repeat;
   position: relative;
   color: #fff;
-  z-index: -10;
 }
 
 .hero::before {
@@ -101,12 +103,8 @@ li {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -5;
-  background: rgba(0, 0, 0, 0.6);
-}
 
-.hero * {
-  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .header-nav {
@@ -132,6 +130,7 @@ li {
   /* background-color: blueviolet; */
   display: grid;
   place-items: center;
+  font-weight: 500;
 }
 
 .nav-links ul {
@@ -162,12 +161,175 @@ li {
 }
 
 .nav-acc-btn button {
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 50%;
   border: none;
   color: #fff;
   background-color: #0a3742;
   border-radius: 5px;
   font-size: 1.1rem;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-acc-btn button a {
+  color: #fff;
+}
+
+.hero-content {
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  right: 0%;
+  /* background-color: aqua; */
+  top: 60%;
+  transform: translateY(-60%);
+}
+
+.hero-content-welcome {
+  height: 50px;
+  width: 250px;
+  background-color: #377dff;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px lightblue solid;
+  border-radius: 5px;
+}
+
+.hero-content-message {
+  height: 200px;
+  width: 520px;
+  /* background-color: yellow; */
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.hero-content-btn {
+  height: 50px;
+  width: 520px;
+  /* background-color: bisque; */
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content-btn1 {
+  height: 80%;
+  width: 30%;
+  border: none;
+  color: #fff;
+  background-color: #0a3742;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background: #377dff;
+  background: url("Waimakariri.png") no-repeat center center/cover;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+  /* z-index: -10; */
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* z-index: -5; */
+}
+
+.login-card-section {
+  height: calc(100vh - 80px);
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.login-card {
+  height: 80%;
+  width: 70%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 6px 32px -4px rgba(0, 0, 0, 0.75);
+}
+
+.login-card-gif {
+  height: 80%;
+  /* background-color: yellow; */
+  display: grid;
+  place-items: center;
+}
+
+.login-card-gif img {
+  height: 400px;
+}
+
+.login-card-main {
+  height: 80%;
+  /* background-color: violet; */
+}
+
+.login-card-main form {
+  height: 100%;
+  width: 90%;
+  /* background-color: #0a3742; */
+  margin: auto;
+  padding: 20px;
+}
+
+.login-card-main form .login-head {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.form-container {
+  height: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.input {
+  height: 55px;
+  width: 100%;
+  border-radius: 50px;
+  padding-left: 20px;
+  background: #e5f5ff;
+  border: none;
+}
+
+.input:last-child {
+  border: none;
+}
+
+.input-btn {
+  background: #377dff;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 2px;
 }

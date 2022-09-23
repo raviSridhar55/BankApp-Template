@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
@@ -19,8 +15,8 @@
     <title>Banking App</title>
   </head>
   <body>
-    <header class="hero">
-      <div class="header-nav container">
+    <header class="login-page">
+      <nav class="header-nav container">
         <div class="logo">
           <img src="./wallet-passes-app.png" alt="logo" />
           <div class="logo-writing">
@@ -37,31 +33,28 @@
             <li><a href="#">Customer Care</a></li>
           </ul>
         </div>
-        <div class="nav-acc-btn">
-          <button>
-            <i class="fa-solid fa-user"></i>
-            <a href="login.html">Login</a>
-          </button>
+      </nav>
+      <section class="login-card-section">
+        <div class="login-card">
+          <div class="login-card-gif">
+            <img src="./81107-welcome.gif" alt="" />
+          </div>
+          <div class="login-card-main">
+            <form>
+              <div class="login-head">
+                <h2 style="color: #000">
+                  User <span style="color: #377dff">Login</span>
+                </h2>
+              </div>
+              <div class="form-container">
+                <input type="email" class="input" placeholder="Email" />
+                <input type="password" class="input" placeholder="Password" />
+                <input type="submit" class="input input-btn" />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-
-      <div class="hero-content" style="z-index: 15">
-        <div class="hero-content-welcome">
-          <p>Welcome to Banking App</p>
-        </div>
-        <div class="hero-content-message">
-          <h1>
-            Online Banking Service
-            <span style="color: #377dff">Recent</span> Banking System Is The
-            Best Service Of Man
-          </h1>
-        </div>
-        <div class="hero-content-btn">
-          <button class="hero-content-btn1">Register</button>
-          <button class="hero-content-btn1">Contact Us</button>
-          <button class="hero-content-btn1">Read More</button>
-        </div>
-      </div>
+      </section>
     </header>
   </body>
 </html>
